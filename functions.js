@@ -25,10 +25,12 @@ function reverse(array){
     return array;
 }
 function slice(min,max,array){
-    let val =array[min];
+    let val =[];
+    let c = 0;
     for(i=0;i<array.length;i++){
-        if(i>=min+1&&i<=max){
-            val += array[i];
+        if(i>=min&&i<max){
+            val[c] = array[i];
+            c++;
         }
     }
     return val;
